@@ -33,7 +33,7 @@ $optParams = array(
 	    'maxResults' => 5,
 		    'orderBy' => 'startTime',
 			    'singleEvents' => true,
-				    'timeMin' => date('c',strtotime("2020-10-01")),//2020年10月1日以降の予定を取得対象
+				    'timeMin' => date('c', strtotime("now")),//現在時刻以降の予定を取得対象
 				);
 $results = $service->events->listEvents($calendarId, $optParams);
 $events = $results->getItems();
